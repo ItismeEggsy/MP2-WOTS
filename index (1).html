@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="media/logo.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <title>Wheelz on the South</title>
+    </head>
+<body>
+<!--navbar-->
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbarcolor">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="media/logo.jpg">Wheelz on the South</a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-white border-bottom">
+                    <a href="index.html" style="text-decoration: none;" class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logo" src="media/logo.jpg">Wheelz on the South</a>
+                    <button type="button" class="btn-close btn-close-white shadow-none p-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Schedule Online</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Promo Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Customers</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                        <!--div class="header-icon">
+                            <i class='bx bx-cart-alt' ></i>
+                        </div>-->
+                        <div class="shopping header-icon">
+                            <i class='bx bx-cart-alt' ></i>
+                            <span class="quantity">0</span>
+                        </div>
+                        <button type="button" class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                            <i class='bx bx-log-in' id="loginicon"></i>&nbspLog In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <div class="modal fade" id="staticBackdrop1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content wrapper" id="body1">
+                <div class="modal-body">
+                    <form class="formbg needs-validation" novalidate>
+                        <h1>Log In</h1>
+                        <div class="input-box">
+                            <input type="text email" placeholder="Username/Email Address" required>
+                            <i class='bx bxs-user'></i>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter your Username or Email Address.
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Password" required>
+                            <i class='bx bxs-lock-alt' ></i>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter your password.
+                            </div>
+                        </div>
+                
+                        <div class="remember-forgot">
+                            <label><input type="checkbox"> Remember me</label>
+                            <p>Forgot password?<a href="#"> Click here!</a></p>
+                        </div>
+                
+                        <button type="submit" class="loginbtn">Log In</button>
+                
+                        <div class="register-link">
+                            <p>By logging in, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                            <p>Don't have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1Signup">
+                                Register here!
+                            </button></a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop1Signup" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content wrapper" id="body1">
+                <div class="modal-body">
+                    <form class="formbg needs-validation" novalidate>
+                        <h1>Sign Up</h1>
+                        <div class="input-box">
+                            <input type="text" placeholder="Full Name" required>
+                            <i class='bx bxs-user'></i>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter your Full Name.
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" placeholder="Email Address" required>
+                            <i class='bx bx-envelope'></i>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter your Email Address.
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Password" required>
+                            <i class='bx bxs-lock-alt' ></i>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter your password.
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Confirm Password" required>
+                            <i class='bx bxs-lock-alt' ></i>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please confirm your password.
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" placeholder="Phone Number" required>
+                            <i class='bx bx-phone' ></i>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter your Phone Number.
+                            </div>
+                        </div>
+                
+                        <button type="submit" class="loginbtn">Signup</button>
+                
+                        <div class="register-link">
+                            <p>By signing up, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                            <p>Already have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                Log in here!
+                            </button></a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--navbar-->
+<br>
+<br>
+<br>
+<!--main page-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 hometext">
+            <h1>Wheelz on the South</h1>
+            <h4>MAGS TIRES AND ACCESSORIES</h4>
+        </div>
+        <div class="col-lg-6 homeimg">
+            <img src="media/homebg.png" style="max-width:100%;height:auto;">
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container-fluid bg-black">
+    <h1 style="text-transform:uppercase; color:#ffffff;  margin:0px; padding:0px; text-align:center; font-family:poppins;">
+        <b>BEST CAR ACCESSORIES<span style="color:rgb(255, 200, 0);"> WEBSITE FOR BEST Price</span>
+        </b></h1>
+    <h2 style="font-family:poppins; font-size:14px; text-align:center; color:#ffffff; font-weight:300; margin-top:5px;">We Give the Best Quality Genuine Car Accessories and Car Parts at the Lowest Price as compared to Other Online Car Accessories Selling Websites.</h2>
+</div>
+<br>
+<br>
+<hr>
+<div class="backgroundmain">
+<div class="container bg-black">
+    <div class="h1 featuredprod">FEATURED PRODUCTS</div>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="mags">MAG WHEELS</div>
+    <br>
+    <div class="row">
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/mags1.jpg" class="card-img-top" alt="mags1" style="max-width:100%;height:auto;">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">Stealth Grip</h5>
+                  <p class="card-text">Discover the perfect fusion of aesthetics and functionality with our Stealth Grip mags tires. Engineered to elevate your driving experience, these tires redefine performance on the road while maintaining an elegant and understated design.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <button type="button" class="btn btn-danger">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/mags2.jpg" class="card-img-top" alt="mags2">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">Turbo Tread</h5>
+                  <p class="card-text">Embark on a journey where every turn is an opportunity to experience the thrill of speed and the precision of control with Turbo Tread mags tires. Engineered for enthusiasts who crave high-performance and style, these tires are a perfect blend of cutting-edge technology and dynamic design.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/mags3.jpg" class="card-img-top" alt="mags3">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">Velocity Grip</h5>
+                  <p class="card-text">Prepare to experience the road like never before with Velocity Grip mags tires. These tires are meticulously crafted to elevate your driving adventure, offering a perfect synergy of cutting-edge technology and sleek design for those who crave both speed and control.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<div class="container">
+    <div class="mags">TIRES</div>
+    <br>
+    <div class="row">
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/tire1.png" class="card-img-top" alt="tire1" style="max-width:100%;height:auto;">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">AMP - TERRAIN ATTACK A/T G</h5>
+                  <p class="card-text">Unleash the power of versatility with the AMP Terrain Attack A/T G, the tire engineered to conquer a myriad of terrains without compromising on performance. Whether you're navigating city streets, tackling off-road trails, or cruising the highway, these tires are designed to provide the ultimate driving experience.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/tire2.png" class="card-img-top" alt="tire2">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">AMP - TERRAIN PRO A/T P</h5>
+                  <p class="card-text">Introducing the AMP Terrain Pro A/T P – where rugged meets refined, and off-road capability seamlessly blends with on-road performance. Engineered for the modern adventurer, these tires are designed to navigate diverse terrains with confidence while delivering a smooth and comfortable ride on the pavement.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/tire3.png" class="card-img-top" alt="tire3">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">AMP Terrain Attack M/T A</h5>
+                  <p class="card-text">Prepare for a tire that thrives where others falter – the AMP Terrain Attack M/T A. Engineered for the off-road enthusiast who demands superior traction and durability, these tires are the epitome of rugged performance, conquering the most challenging terrains with authority.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<div class="container">
+    <div class="mags">CAR SEATS</div>
+    <br>
+    <div class="row">
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/seat1.jpg" class="card-img-top" alt="seat1" style="max-width:100%;height:auto;">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">CAP DRIVEN® Voris Series Full Set Seat Covers: Elevate Your Drive in Comfort and Style</h5>
+                  <p class="card-text">Introducing the CAP DRIVEN® Voris Series Full Set Seat Covers – where innovation meets craftsmanship to redefine your driving experience. Designed with meticulous attention to detail, these seat covers seamlessly blend unparalleled comfort with a sleek aesthetic, transforming your vehicle's interior into a haven of sophistication.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/seat2.jpg" class="card-img-top" alt="seat2">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">CAP DRIVEN® Voris Series Front Row Set Seat Covers: Unrivaled Elegance for Your Drive</h5>
+                  <p class="card-text">Elevate the interior of your vehicle with the CAP DRIVEN® Voris Series Front Row Set Seat Covers, a harmonious blend of sophistication and functionality. Precision-engineered to seamlessly fit your front-row seats, these seat covers redefine comfort and style, ensuring every drive is an experience in luxury.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <a href="#" class="featured">
+            <div class="card" style="width: 100%;">
+                <img src="media/seat3.jpg" class="card-img-top" alt="seat3">
+                <div class="card-body d-none d-sm-block">
+                  <h5 class="card-title">CAP DRIVEN® Touring Series Full Set Seat Covers: Elevate Every Journey in Comfort and Style</h5>
+                  <p class="card-text">Introducing the CAP DRIVEN® Touring Series Full Set Seat Covers, where practicality meets luxury to transform your vehicle's interior. Crafted with meticulous attention to detail, these seat covers offer a perfect balance of elegance and functionality, enhancing your driving experience with unparalleled comfort and style.</p>
+                  <div class="buynowbtn">Buy Now</div></a><br>
+                  <div class="buynowbtn">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<div class="container bg-opacity-75 bg-black pb-3 pt-3 rounded-1">
+    <div class="story">
+        <h2>ABOUT WHEELZ ON THE SOUTH</h2>
+    </div>
+    <div class="content"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>At Wheelz on the South, we are not just about wheels; we are about a lifestyle—a celebration of the road less traveled, the thrill of the journey, and the pursuit of individuality. Nestled in the heart of Philippines, we are more than a destination for premium wheels and tires; we are an embodiment of passion for automotive excellence.</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>Founded in 2023, Wheelz on the South was born out of a shared love for automobiles and a desire to redefine the driving experience. What started as a vision has evolved into a haven for enthusiasts seeking more than just standard wheels; we offer an invitation to explore the extraordinary.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<!--main page-->
+<!--footer-->
+<div>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/WheelzOnTheSouth" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/wheelzonthesouth.co/?fbclid=IwAR1CuKpRbYJqfAv5c8lIgNFukOLHj0hLH1kaJYH3xnN1Pt4dIx16RV47wzo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@wheelzonthesouthofficial?fbclid=IwAR30Y_QVFWXXWRRxDUZhMt6VUlmmuebAVDBHCniTVLUFbWASy-q1CATi9O8" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@wheelzonthesouth1690" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <p class="copyrights"><i class='bx bxs-map' ></i>National Hwy, 1770 Muntinlupa, Philippines 1773 Muntinlupa City, Philippines<br><i class='bx bxs-phone' ></i> 09081826915&nbsp;<i class='bx bxs-envelope' ></i>wheelzonthesouth@gmail.com</p>
+        </div>
+        <div class="footerBottom">
+            <p>© 2023 Wheelz on the South; Designed by <span class="designer">Peter C. & Archie K.</span></p>
+        </div>
+    </footer>
+</div>
+<!--footer-->
+<script src="JS.js"></script>
+</body>
+</html>
